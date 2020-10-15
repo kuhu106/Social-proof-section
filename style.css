@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+}
+
+.container {
+    position: relative;
+    margin: 10%;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    background-image: url(images/bg-pattern-top-desktop.svg);
+    background-repeat: no-repeat;
+    top: 0;
+    left: -15%;
+    width: 100%;
+    height: 100%;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    background-image: url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    bottom: 0;
+    right: 0;
+    width: 1020px;
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 100px;
+}
+
+.col-2 {
+    flex-basis: 50%;
+    width: 100%;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    width: 100%;
+}
+
+.product-description h1 {
+    color: #502050;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 45px;
+    padding-right: 30%;
+    padding-bottom: 15px;
+}
+
+.product-description p {
+    color: hsl(303, 10%, 53%);
+    font-size: 13px;
+    padding-right: 30%;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.rating-box {
+    position: relative;
+}
+
+.rating-box .box {
+    background-color: #f7f2f8;
+    border-radius: 5px;
+    width: 400px;
+    display: flex;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+}
+
+.rating-box .rating {
+    flex-basis: 40%;
+}
+
+.rating-box .rating i {
+    color: #f29746;
+    padding-right: 3px;
+}
+
+.rating-box .rating-text {
+    flex-basis: 60%;
+}
+
+.rating-box .rating-text h6 {
+    color: #502050;
+    font-size: 12px;
+}
+
+.ratings-box-1 {
+    position: absolute;
+    transform: translateY(-100px);
+}
+
+.ratings-box-2 {
+    position: absolute;
+    transform: translate(50px, -35px);
+}
+
+.ratings-box-3 {
+    position: absolute;
+    transform: translate(100px, 28px);
+}
+
+.review {
+    border-radius: 10px;
+    background-color: #511f50;
+    color: #fff;
+    padding: 40px 30px;
+    width: 30%;
+}
+
+.profile {
+    display: flex;
+}
+
+.profile img {
+    border-radius: 50%;
+    float: left;
+    width: 22%;
+}
+
+.profile-text {
+    margin: auto 0 auto 25px;
+}
+
+.profile-text h5 {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.profile-text p {
+    color: hsl(333, 80%, 67%);
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: normal;
+}
+
+.review-text {
+    clear: left;
+    margin-top: 30px;
+    font-size: 13px;
+    margin-right: 10px;
+    line-height: 20px
+}
+
+.reviews {
+    position: relative;
+}
+
+.review-1 {
+    position: absolute;
+    transform: translate(-117%, 51%);
+}
+
+.review-2 {
+    position: absolute;
+    transform: translate(-9%, 60%);
+}
+
+.review-3 {
+    position: absolute;
+    transform: translate(99%, 69%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/*********** Responsive css *******************/
+
+@media only screen and (max-width: 768px) {
+
+    body {
+        text-align: center;
+        padding: 0;
+    }
+    .row {
+        display: block;
+        padding-bottom: 0;
+    }
+    
+    .col-2 {
+        flex-basis: 100%;
+    }
+
+    .product-description h1 {
+        padding-right: 0;
+        font-size: 30px;
+    }
+
+    .product-description p {
+        padding-right: 0;
+        margin: 20px auto;
+    }
+
+    .rating-box {
+        position: inherit;
+        margin: 20px auto;
+    }
+
+    .rating-box .box {
+        width: 100%;
+        display: block;
+    }
+
+    .rating-box .rating {
+        margin-bottom: 8px;
+    }
+
+    .ratings-box-1,
+    .ratings-box-2,
+    .ratings-box-3 {
+        position: inherit;
+        transform: none;
+    }
+
+    .reviews {
+        position: inherit;
+    }
+
+    .review {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .review-1,
+    .review-2,
+    .review-3 {
+        position: inherit;
+        transform: none;
+    }
+
+    .container::before {
+        background-image: url(images/bg-pattern-top-mobile.svg);
+    }
+
+    .container::after {
+        background-image: url(images/bg-pattern-bottom-mobile.svg);
+        height: 35%;
+    }
+}
